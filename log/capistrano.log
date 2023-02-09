@@ -51,3 +51,104 @@
   INFO ---------------------------------------------------------------------------
   INFO START 2023-02-09 09:20:40 +0000 cap staging deploy
   INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 09:33:51 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [efd54851] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [efd54851] Command: /usr/bin/env mkdir -p /tmp
+  INFO [efd54851] Finished in 0.393 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-075575f4bd71c7e5ad2f.sh 0.0%
+  INFO Uploading /tmp/git-ssh-075575f4bd71c7e5ad2f.sh 100.0%
+  INFO [1b9c778a] Running /usr/bin/env chmod 700 /tmp/git-ssh-075575f4bd71c7e5ad2f.sh as deploy@172.31.39.42
+ DEBUG [1b9c778a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-075575f4bd71c7e5ad2f.sh
+  INFO [1b9c778a] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [22721e20] Running /usr/bin/env git ls-remote git@github.com:arunbeniwal008/express-node-js-hello-world-app.git HEAD as deploy@172.31.39.42
+ DEBUG [22721e20] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-075575f4bd71c7e5ad2f.sh" ; /usr/bin/env git ls-remote git@github.com:arunbeniwal008/express-node-js-hello-world-app.git HEAD )
+ DEBUG [22721e20] 	2d6da4631b9b0399bdd051c9a3c02af9e5d6815a	HEAD
+  INFO [22721e20] Finished in 2.844 seconds with exit status 0 (successful).
+  INFO [74f17264] Running /usr/bin/env mkdir -p /home/deploy/hello-world/shared /home/deploy/hello-world/releases as deploy@172.31.39.42
+ DEBUG [74f17264] Command: /usr/bin/env mkdir -p /home/deploy/hello-world/shared /home/deploy/hello-world/releases
+  INFO [74f17264] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [27a949bf] Running [ -f /home/deploy/hello-world/current/REVISION ] as deploy@172.31.39.42
+ DEBUG [27a949bf] Command: [ -f /home/deploy/hello-world/current/REVISION ]
+ DEBUG [27a949bf] Finished in 0.060 seconds with exit status 1 (failed).
+ DEBUG [f19c8c31] Running [ -f /home/deploy/hello-world/repo/HEAD ] as deploy@172.31.39.42
+ DEBUG [f19c8c31] Command: [ -f /home/deploy/hello-world/repo/HEAD ]
+ DEBUG [f19c8c31] Finished in 0.019 seconds with exit status 1 (failed).
+ DEBUG [467874f2] Running if test ! -d /home/deploy/hello-world; then echo "Directory does not exist '/home/deploy/hello-world'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [467874f2] Command: if test ! -d /home/deploy/hello-world; then echo "Directory does not exist '/home/deploy/hello-world'" 1>&2; false; fi
+ DEBUG [467874f2] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [dc3e3ef8] Running /usr/bin/env git clone --mirror git@github.com:arunbeniwal008/express-node-js-hello-world-app.git /home/deploy/hello-world/repo as deploy@172.31.39.42
+ DEBUG [dc3e3ef8] Command: cd /home/deploy/hello-world && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-075575f4bd71c7e5ad2f.sh" ; /usr/bin/env git clone --mirror git@github.com:arunbeniwal008/express-node-js-hello-world-app.git /home/deploy/hello-world/repo )
+ DEBUG [dc3e3ef8] 	Cloning into bare repository '/home/deploy/hello-world/repo'...
+  INFO [dc3e3ef8] Finished in 3.740 seconds with exit status 0 (successful).
+ DEBUG [14879231] Running if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [14879231] Command: if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi
+ DEBUG [14879231] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [74ee387a] Running /usr/bin/env git remote set-url origin git@github.com:arunbeniwal008/express-node-js-hello-world-app.git as deploy@172.31.39.42
+ DEBUG [74ee387a] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-075575f4bd71c7e5ad2f.sh" ; /usr/bin/env git remote set-url origin git@github.com:arunbeniwal008/express-node-js-hello-world-app.git )
+  INFO [74ee387a] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [e92be8b6] Running /usr/bin/env git remote update --prune as deploy@172.31.39.42
+ DEBUG [e92be8b6] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-075575f4bd71c7e5ad2f.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e92be8b6] 	Fetching origin
+  INFO [e92be8b6] Finished in 2.521 seconds with exit status 0 (successful).
+ DEBUG [3bbcd700] Running if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [3bbcd700] Command: if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi
+ DEBUG [3bbcd700] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [84da108d] Running /usr/bin/env mkdir -p /home/deploy/hello-world/releases/20230209093354 as deploy@172.31.39.42
+ DEBUG [84da108d] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-075575f4bd71c7e5ad2f.sh" ; /usr/bin/env mkdir -p /home/deploy/hello-world/releases/20230209093354 )
+  INFO [84da108d] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [2247b195] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/hello-world/releases/20230209093354 as deploy@172.31.39.42
+ DEBUG [2247b195] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-075575f4bd71c7e5ad2f.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/hello-world/releases/20230209093354 )
+ DEBUG [2247b195] 	fatal: not a valid object name: master
+ DEBUG [2247b195] 	tar: 
+ DEBUG [2247b195] 	This does not look like a tar archive
+ DEBUG [2247b195] 	
+ DEBUG [2247b195] 	tar: 
+ DEBUG [2247b195] 	Exiting with failure status due to previous errors
+ DEBUG [2247b195] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 09:45:46 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2aa824d2] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [2aa824d2] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 09:48:10 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f39a3264] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [f39a3264] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 10:01:15 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [009d73d9] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [009d73d9] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 10:03:29 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [db1388c0] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [db1388c0] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 10:07:37 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [787ee258] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [787ee258] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 10:08:38 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [096d8b41] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [096d8b41] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 10:09:23 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4c22a32c] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [4c22a32c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 10:11:33 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [dabe11f0] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [dabe11f0] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 10:13:31 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e49ac6fa] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [e49ac6fa] Command: /usr/bin/env mkdir -p /tmp
