@@ -2,7 +2,7 @@
 #Stopping existing node servers
 echo "Stopping any existing node servers"
 pkill node
-cd /home/deploy/hello-world
+cd /home/deploy/hello-world/current
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # loads nvm
