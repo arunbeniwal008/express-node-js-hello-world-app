@@ -2245,3 +2245,203 @@ Run `npm audit` for details.
   INFO [1b9b8adf] Running /usr/bin/env echo "Branch master (at 04c743e77d9406783d28f293bffbb329da990813) deployed as release 20230209132134 by ec2-user" >> /home/deploy/hello-world/revisions.log as deploy@172.31.39.42
  DEBUG [1b9b8adf] Command: cd /home/deploy/hello-world/releases && /usr/bin/env echo "Branch master (at 04c743e77d9406783d28f293bffbb329da990813) deployed as release 20230209132134 by ec2-user" >> /home/deploy/hello-world/revisions.log
   INFO [1b9b8adf] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 13:24:07 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9e703f72] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [9e703f72] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9e703f72] Finished in 0.326 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-dac95ffac10356a1d2ef.sh 0.0%
+  INFO Uploading /tmp/git-ssh-dac95ffac10356a1d2ef.sh 100.0%
+  INFO [604ea291] Running /usr/bin/env chmod 700 /tmp/git-ssh-dac95ffac10356a1d2ef.sh as deploy@172.31.39.42
+ DEBUG [604ea291] Command: /usr/bin/env chmod 700 /tmp/git-ssh-dac95ffac10356a1d2ef.sh
+  INFO [604ea291] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [85858bba] Running /usr/bin/env git ls-remote git@github.com:arunbeniwal008/express-node-js-hello-world-app.git HEAD as deploy@172.31.39.42
+ DEBUG [85858bba] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-dac95ffac10356a1d2ef.sh" ; /usr/bin/env git ls-remote git@github.com:arunbeniwal008/express-node-js-hello-world-app.git HEAD )
+ DEBUG [85858bba] 	9d4c4292610492660a839ba7dbf0c10f021098e5	HEAD
+  INFO [85858bba] Finished in 2.485 seconds with exit status 0 (successful).
+  INFO [90f5bcc5] Running /usr/bin/env mkdir -p /home/deploy/hello-world/shared /home/deploy/hello-world/releases as deploy@172.31.39.42
+ DEBUG [90f5bcc5] Command: /usr/bin/env mkdir -p /home/deploy/hello-world/shared /home/deploy/hello-world/releases
+  INFO [90f5bcc5] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [5db9c08f] Running [ -f /home/deploy/hello-world/current/REVISION ] as deploy@172.31.39.42
+ DEBUG [5db9c08f] Command: [ -f /home/deploy/hello-world/current/REVISION ]
+ DEBUG [5db9c08f] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [b7f39b99] Running /usr/bin/env cat /home/deploy/hello-world/current/REVISION 2>/dev/null as deploy@172.31.39.42
+ DEBUG [b7f39b99] Command: /usr/bin/env cat /home/deploy/hello-world/current/REVISION 2>/dev/null
+ DEBUG [b7f39b99] 	04c743e77d9406783d28f293bffbb329da990813
+ DEBUG [b7f39b99] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [6fdf4aa1] Running [ -f /home/deploy/hello-world/repo/HEAD ] as deploy@172.31.39.42
+ DEBUG [6fdf4aa1] Command: [ -f /home/deploy/hello-world/repo/HEAD ]
+ DEBUG [6fdf4aa1] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/hello-world/repo
+ DEBUG [f6da2693] Running if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [f6da2693] Command: if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi
+ DEBUG [f6da2693] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [6157561a] Running /usr/bin/env git remote set-url origin git@github.com:arunbeniwal008/express-node-js-hello-world-app.git as deploy@172.31.39.42
+ DEBUG [6157561a] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-dac95ffac10356a1d2ef.sh" ; /usr/bin/env git remote set-url origin git@github.com:arunbeniwal008/express-node-js-hello-world-app.git )
+  INFO [6157561a] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [27b5b1e7] Running /usr/bin/env git remote update --prune as deploy@172.31.39.42
+ DEBUG [27b5b1e7] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-dac95ffac10356a1d2ef.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [27b5b1e7] 	Fetching origin
+ DEBUG [27b5b1e7] 	From github.com:arunbeniwal008/express-node-js-hello-world-app
+   04c743e..9d4c429  master     -> master
+  INFO [27b5b1e7] Finished in 2.736 seconds with exit status 0 (successful).
+ DEBUG [db5dd8d9] Running if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [db5dd8d9] Command: if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi
+ DEBUG [db5dd8d9] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [7962a9c3] Running /usr/bin/env mkdir -p /home/deploy/hello-world/releases/20230209132410 as deploy@172.31.39.42
+ DEBUG [7962a9c3] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-dac95ffac10356a1d2ef.sh" ; /usr/bin/env mkdir -p /home/deploy/hello-world/releases/20230209132410 )
+  INFO [7962a9c3] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [d3568c7d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/hello-world/releases/20230209132410 as deploy@172.31.39.42
+ DEBUG [d3568c7d] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-dac95ffac10356a1d2ef.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/hello-world/releases/20230209132410 )
+  INFO [d3568c7d] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [10b30748] Running if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [10b30748] Command: if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi
+ DEBUG [10b30748] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [0fbb6640] Running /usr/bin/env git rev-list --max-count=1 master as deploy@172.31.39.42
+ DEBUG [0fbb6640] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-dac95ffac10356a1d2ef.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [0fbb6640] 	9d4c4292610492660a839ba7dbf0c10f021098e5
+ DEBUG [0fbb6640] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [17e407b3] Running if test ! -d /home/deploy/hello-world/releases/20230209132410; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132410'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [17e407b3] Command: if test ! -d /home/deploy/hello-world/releases/20230209132410; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132410'" 1>&2; false; fi
+ DEBUG [17e407b3] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [aeddd012] Running /usr/bin/env echo "9d4c4292610492660a839ba7dbf0c10f021098e5" > REVISION as deploy@172.31.39.42
+ DEBUG [aeddd012] Command: cd /home/deploy/hello-world/releases/20230209132410 && /usr/bin/env echo "9d4c4292610492660a839ba7dbf0c10f021098e5" > REVISION
+  INFO [aeddd012] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [679edd65] Running if test ! -d /home/deploy/hello-world/releases/20230209132410; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132410'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [679edd65] Command: if test ! -d /home/deploy/hello-world/releases/20230209132410; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132410'" 1>&2; false; fi
+ DEBUG [679edd65] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [e4146468] Running /usr/bin/env sudo npm install -s as deploy@172.31.39.42
+ DEBUG [e4146468] Command: cd /home/deploy/hello-world/releases/20230209132410 && /usr/bin/env sudo npm install -s
+  INFO [e4146468] Finished in 3.014 seconds with exit status 0 (successful).
+ DEBUG [aad367ce] Running if test ! -d /home/deploy/hello-world/releases/20230209132410; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132410'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [aad367ce] Command: if test ! -d /home/deploy/hello-world/releases/20230209132410; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132410'" 1>&2; false; fi
+ DEBUG [aad367ce] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [80c69546] Running /usr/bin/env ln -s /home/deploy/hello-world/releases/20230209132410 /home/deploy/hello-world/releases/current as deploy@172.31.39.42
+ DEBUG [80c69546] Command: /usr/bin/env ln -s /home/deploy/hello-world/releases/20230209132410 /home/deploy/hello-world/releases/current
+  INFO [80c69546] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [7939c8c0] Running /usr/bin/env mv /home/deploy/hello-world/releases/current /home/deploy/hello-world as deploy@172.31.39.42
+ DEBUG [7939c8c0] Command: /usr/bin/env mv /home/deploy/hello-world/releases/current /home/deploy/hello-world
+  INFO [7939c8c0] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [a999e14f] Running /usr/bin/env sudo /bin/bash /home/deploy/hello-world/current/node-server-restart.sh as deploy@172.31.39.42
+ DEBUG [a999e14f] Command: /usr/bin/env sudo /bin/bash /home/deploy/hello-world/current/node-server-restart.sh
+ DEBUG [a999e14f] 	Stopping any existing node servers
+ DEBUG [a999e14f] 	
+up to date, audited 51 packages in 852ms
+ DEBUG [a999e14f] 	
+3 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+  INFO [a999e14f] Finished in 1.419 seconds with exit status 0 (successful).
+ DEBUG [03fab4d9] Running /usr/bin/env ls -x /home/deploy/hello-world/releases as deploy@172.31.39.42
+ DEBUG [03fab4d9] Command: /usr/bin/env ls -x /home/deploy/hello-world/releases
+ DEBUG [03fab4d9] 	20230209132134	20230209132410
+ DEBUG [03fab4d9] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [df0d81fe] Running if test ! -d /home/deploy/hello-world/releases; then echo "Directory does not exist '/home/deploy/hello-world/releases'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [df0d81fe] Command: if test ! -d /home/deploy/hello-world/releases; then echo "Directory does not exist '/home/deploy/hello-world/releases'" 1>&2; false; fi
+ DEBUG [df0d81fe] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [3eb11241] Running /usr/bin/env echo "Branch master (at 9d4c4292610492660a839ba7dbf0c10f021098e5) deployed as release 20230209132410 by ec2-user" >> /home/deploy/hello-world/revisions.log as deploy@172.31.39.42
+ DEBUG [3eb11241] Command: cd /home/deploy/hello-world/releases && /usr/bin/env echo "Branch master (at 9d4c4292610492660a839ba7dbf0c10f021098e5) deployed as release 20230209132410 by ec2-user" >> /home/deploy/hello-world/revisions.log
+  INFO [3eb11241] Finished in 0.035 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-02-09 13:25:08 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [97f912cf] Running /usr/bin/env mkdir -p /tmp as deploy@172.31.39.42
+ DEBUG [97f912cf] Command: /usr/bin/env mkdir -p /tmp
+  INFO [97f912cf] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-1a18039988149633ca9a.sh 0.0%
+  INFO Uploading /tmp/git-ssh-1a18039988149633ca9a.sh 100.0%
+  INFO [f04f2dc5] Running /usr/bin/env chmod 700 /tmp/git-ssh-1a18039988149633ca9a.sh as deploy@172.31.39.42
+ DEBUG [f04f2dc5] Command: /usr/bin/env chmod 700 /tmp/git-ssh-1a18039988149633ca9a.sh
+  INFO [f04f2dc5] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [7866a104] Running /usr/bin/env git ls-remote git@github.com:arunbeniwal008/express-node-js-hello-world-app.git HEAD as deploy@172.31.39.42
+ DEBUG [7866a104] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1a18039988149633ca9a.sh" ; /usr/bin/env git ls-remote git@github.com:arunbeniwal008/express-node-js-hello-world-app.git HEAD )
+ DEBUG [7866a104] 	9d4c4292610492660a839ba7dbf0c10f021098e5	HEAD
+  INFO [7866a104] Finished in 2.477 seconds with exit status 0 (successful).
+  INFO [f92493ef] Running /usr/bin/env mkdir -p /home/deploy/hello-world/shared /home/deploy/hello-world/releases as deploy@172.31.39.42
+ DEBUG [f92493ef] Command: /usr/bin/env mkdir -p /home/deploy/hello-world/shared /home/deploy/hello-world/releases
+  INFO [f92493ef] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [53ce4c7d] Running [ -f /home/deploy/hello-world/current/REVISION ] as deploy@172.31.39.42
+ DEBUG [53ce4c7d] Command: [ -f /home/deploy/hello-world/current/REVISION ]
+ DEBUG [53ce4c7d] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [0a4e917e] Running /usr/bin/env cat /home/deploy/hello-world/current/REVISION 2>/dev/null as deploy@172.31.39.42
+ DEBUG [0a4e917e] Command: /usr/bin/env cat /home/deploy/hello-world/current/REVISION 2>/dev/null
+ DEBUG [0a4e917e] 	9d4c4292610492660a839ba7dbf0c10f021098e5
+ DEBUG [0a4e917e] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [0802b4d1] Running [ -f /home/deploy/hello-world/repo/HEAD ] as deploy@172.31.39.42
+ DEBUG [0802b4d1] Command: [ -f /home/deploy/hello-world/repo/HEAD ]
+ DEBUG [0802b4d1] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/hello-world/repo
+ DEBUG [8ab46efe] Running if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [8ab46efe] Command: if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi
+ DEBUG [8ab46efe] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [fe09c633] Running /usr/bin/env git remote set-url origin git@github.com:arunbeniwal008/express-node-js-hello-world-app.git as deploy@172.31.39.42
+ DEBUG [fe09c633] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1a18039988149633ca9a.sh" ; /usr/bin/env git remote set-url origin git@github.com:arunbeniwal008/express-node-js-hello-world-app.git )
+  INFO [fe09c633] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [53e7636c] Running /usr/bin/env git remote update --prune as deploy@172.31.39.42
+ DEBUG [53e7636c] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1a18039988149633ca9a.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [53e7636c] 	Fetching origin
+  INFO [53e7636c] Finished in 2.453 seconds with exit status 0 (successful).
+ DEBUG [f5817f65] Running if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [f5817f65] Command: if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi
+ DEBUG [f5817f65] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [bac3cd25] Running /usr/bin/env mkdir -p /home/deploy/hello-world/releases/20230209132510 as deploy@172.31.39.42
+ DEBUG [bac3cd25] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1a18039988149633ca9a.sh" ; /usr/bin/env mkdir -p /home/deploy/hello-world/releases/20230209132510 )
+  INFO [bac3cd25] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [c87e51d1] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/hello-world/releases/20230209132510 as deploy@172.31.39.42
+ DEBUG [c87e51d1] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1a18039988149633ca9a.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/hello-world/releases/20230209132510 )
+  INFO [c87e51d1] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [6f63f976] Running if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [6f63f976] Command: if test ! -d /home/deploy/hello-world/repo; then echo "Directory does not exist '/home/deploy/hello-world/repo'" 1>&2; false; fi
+ DEBUG [6f63f976] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [b744ff59] Running /usr/bin/env git rev-list --max-count=1 master as deploy@172.31.39.42
+ DEBUG [b744ff59] Command: cd /home/deploy/hello-world/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1a18039988149633ca9a.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b744ff59] 	9d4c4292610492660a839ba7dbf0c10f021098e5
+ DEBUG [b744ff59] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [e8503a29] Running if test ! -d /home/deploy/hello-world/releases/20230209132510; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132510'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [e8503a29] Command: if test ! -d /home/deploy/hello-world/releases/20230209132510; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132510'" 1>&2; false; fi
+ DEBUG [e8503a29] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [148ca95a] Running /usr/bin/env echo "9d4c4292610492660a839ba7dbf0c10f021098e5" > REVISION as deploy@172.31.39.42
+ DEBUG [148ca95a] Command: cd /home/deploy/hello-world/releases/20230209132510 && /usr/bin/env echo "9d4c4292610492660a839ba7dbf0c10f021098e5" > REVISION
+  INFO [148ca95a] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [6b2a25a4] Running if test ! -d /home/deploy/hello-world/releases/20230209132510; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132510'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [6b2a25a4] Command: if test ! -d /home/deploy/hello-world/releases/20230209132510; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132510'" 1>&2; false; fi
+ DEBUG [6b2a25a4] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [1a33095b] Running /usr/bin/env sudo npm install -s as deploy@172.31.39.42
+ DEBUG [1a33095b] Command: cd /home/deploy/hello-world/releases/20230209132510 && /usr/bin/env sudo npm install -s
+  INFO [1a33095b] Finished in 6.157 seconds with exit status 0 (successful).
+ DEBUG [1ff2b3c9] Running if test ! -d /home/deploy/hello-world/releases/20230209132510; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132510'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [1ff2b3c9] Command: if test ! -d /home/deploy/hello-world/releases/20230209132510; then echo "Directory does not exist '/home/deploy/hello-world/releases/20230209132510'" 1>&2; false; fi
+ DEBUG [1ff2b3c9] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [19110bd7] Running /usr/bin/env ln -s /home/deploy/hello-world/releases/20230209132510 /home/deploy/hello-world/releases/current as deploy@172.31.39.42
+ DEBUG [19110bd7] Command: /usr/bin/env ln -s /home/deploy/hello-world/releases/20230209132510 /home/deploy/hello-world/releases/current
+  INFO [19110bd7] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [fb3e9231] Running /usr/bin/env mv /home/deploy/hello-world/releases/current /home/deploy/hello-world as deploy@172.31.39.42
+ DEBUG [fb3e9231] Command: /usr/bin/env mv /home/deploy/hello-world/releases/current /home/deploy/hello-world
+  INFO [fb3e9231] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [e580e1af] Running /usr/bin/env sudo /bin/bash /home/deploy/hello-world/current/node-server-restart.sh as deploy@172.31.39.42
+ DEBUG [e580e1af] Command: /usr/bin/env sudo /bin/bash /home/deploy/hello-world/current/node-server-restart.sh
+ DEBUG [e580e1af] 	Stopping any existing node servers
+ DEBUG [e580e1af] 	
+up to date, audited 51 packages in 844ms
+ DEBUG [e580e1af] 	
+3 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+  INFO [e580e1af] Finished in 1.510 seconds with exit status 0 (successful).
+ DEBUG [4f442209] Running /usr/bin/env ls -x /home/deploy/hello-world/releases as deploy@172.31.39.42
+ DEBUG [4f442209] Command: /usr/bin/env ls -x /home/deploy/hello-world/releases
+ DEBUG [4f442209] 	20230209132134	20230209132410	20230209132510
+ DEBUG [4f442209] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [1b81151b] Running if test ! -d /home/deploy/hello-world/releases; then echo "Directory does not exist '/home/deploy/hello-world/releases'" 1>&2; false; fi as deploy@172.31.39.42
+ DEBUG [1b81151b] Command: if test ! -d /home/deploy/hello-world/releases; then echo "Directory does not exist '/home/deploy/hello-world/releases'" 1>&2; false; fi
+ DEBUG [1b81151b] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [04e38a90] Running /usr/bin/env echo "Branch master (at 9d4c4292610492660a839ba7dbf0c10f021098e5) deployed as release 20230209132510 by ec2-user" >> /home/deploy/hello-world/revisions.log as deploy@172.31.39.42
+ DEBUG [04e38a90] Command: cd /home/deploy/hello-world/releases && /usr/bin/env echo "Branch master (at 9d4c4292610492660a839ba7dbf0c10f021098e5) deployed as release 20230209132510 by ec2-user" >> /home/deploy/hello-world/revisions.log
+  INFO [04e38a90] Finished in 0.033 seconds with exit status 0 (successful).
