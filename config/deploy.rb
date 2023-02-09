@@ -4,12 +4,12 @@ lock "~> 3.17.1"
 set :application, "express-nodejs-helloworld-app"
 set :repo_url, "git@github.com:arunbeniwal008/express-node-js-hello-world-app.git"
 
-#set :user, 'deploy'
+set :user, 'deploy'
 # set :scm_passphrase, "password"
 set :deploy_to, "/home/deploy/hello-world"
-#set :use_sudo, false
+set :use_sudo, false
 #set :scm, :git
-#server "172.31.39.42",  roles: [:app, :web, :db], :primary => true 
+server "172.31.39.42",  roles: [:app, :web, :db], :primary => true 
 
 
 
