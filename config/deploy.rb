@@ -12,15 +12,17 @@ set :use_sudo, false
 server "172.31.39.42",  roles: [:app, :web, :db], :primary => true 
 
 
+#########Arun##############
 
-##############Arun#################
 namespace :deploy do
+
+
 
   desc 'Copy upstart script'
   task :upstart do
     on roles(:app) do
       within release_path do
-        sudo :chmod, '+x', "/home/deploy/hello-world/current/node-server-restart.sh"
+        #sudo :chmod, '+rwx', "/home/deploy/hello-world/current/node-server-rreleasesestart.sh"
       end
     end
   end
@@ -47,7 +49,6 @@ namespace :deploy do
   after :publishing, :restart
 
 end
-
 ###########arun-end#############
 
 
